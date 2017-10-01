@@ -1,7 +1,7 @@
 web:
     image: nginx:latest
     ports:
-        - "127.0.0.1:2137:80"
+        - 127.0.0.1:2137:80
     volumes:
         - ../:/var/www
         - ./site.conf:/etc/nginx/conf.d/default.conf
@@ -18,7 +18,7 @@ php:
 postgres:
     image: postgres:9.6
     ports:
-        - 2138:5432
+        - 127.0.0.1:2138:5432
     environment:
         - POSTGRES_USER=root
         - POSTGRES_PASSWORD=root
